@@ -1,0 +1,107 @@
+<div class="container-lpage custom-main-box" >
+<div class="container main custom-main-left-box">
+    <div class="left p-2">
+      <h1 class="main-heading">A comprehensive platform for reliable</h1>
+      <h2 class="text-white ml12"><span class="letter" style="opacity: 1; transform: translateX(0px) translateZ(0px);">j</span><span class="letter" style="opacity: 1; transform: translateX(0px) translateZ(0px);">o</span><span class="letter" style="opacity: 1; transform: translateX(0px) translateZ(0px);">b</span> <span class="letter" style="opacity: 0.999999; transform: translateX(2.37e-05px) translateZ(0px);">o</span><span class="letter" style="opacity: 0.999993; transform: translateX(0.0002909px) translateZ(0px);">p</span><span class="letter" style="opacity: 0.999971; transform: translateX(0.0011449px) translateZ(0px);">p</span><span class="letter" style="opacity: 0.999926; transform: translateX(0.0029754px) translateZ(0px);">o</span><span class="letter" style="opacity: 0.999844; transform: translateX(0.0062253px) translateZ(0px);">r</span><span class="letter" style="opacity: 0.999715; transform: translateX(0.0113982px) translateZ(0px);">t</span><span class="letter" style="opacity: 0.999523; transform: translateX(0.0190685px) translateZ(0px);">u</span><span class="letter" style="opacity: 0.999253; transform: translateX(0.0298925px) translateZ(0px);">n</span><span class="letter" style="opacity: 0.998884; transform: translateX(0.0446219px) translateZ(0px);">i</span><span class="letter" style="opacity: 0.998397; transform: translateX(0.0641202px) translateZ(0px);">t</span><span class="letter" style="opacity: 0.997765; transform: translateX(0.0893823px) translateZ(0px);">i</span><span class="letter" style="opacity: 0.996961; transform: translateX(0.121558px) translateZ(0px);">e</span><span class="letter" style="opacity: 0.99595; transform: translateX(0.161981px) translateZ(0px);">s</span> <span class="letter" style="opacity: 0.994695; transform: translateX(0.212203px) translateZ(0px);">a</span><span class="letter" style="opacity: 0.993149; transform: translateX(0.274041px) translateZ(0px);">n</span><span class="letter" style="opacity: 0.991259; transform: translateX(0.349626px) translateZ(0px);">d</span> <span class="letter" style="opacity: 0.988963; transform: translateX(0.441474px) translateZ(0px);">i</span><span class="letter" style="opacity: 0.986186; transform: translateX(0.552571px) translateZ(0px);">n</span><span class="letter" style="opacity: 0.982838; transform: translateX(0.686477px) translateZ(0px);">t</span><span class="letter" style="opacity: 0.978813; transform: translateX(0.84747px) translateZ(0px);">e</span><span class="letter" style="opacity: 0.973982; transform: translateX(1.04071px) translateZ(0px);">r</span><span class="letter" style="opacity: 0.968188; transform: translateX(1.2725px) translateZ(0px);">n</span><span class="letter" style="opacity: 0.961237; transform: translateX(1.55053px) translateZ(0px);">s</span><span class="letter" style="opacity: 0.952892; transform: translateX(1.88433px) translateZ(0px);">h</span><span class="letter" style="opacity: 0.942856; transform: translateX(2.28575px) translateZ(0px);">i</span><span class="letter" style="opacity: 0.930757; transform: translateX(2.7697px) translateZ(0px);">p</span><span class="letter" style="opacity: 0.916124; transform: translateX(3.35502px) translateZ(0px);">s</span><span class="letter" style="opacity: 0.898357; transform: translateX(4.06572px) translateZ(0px);">.</span></h2>
+      <h5 class="text-white">Get Discovered. Get Hired.</h5>
+      <% if(recruiterEmail){ %>
+       <p class="fs-3 fw-lighter font-monospace text-light"> Hello <span class="text-uppercase"><%= recruiterName %></span> Easily welcome you as a Recruiter.</p>
+        <% }else{ %>
+      <div class="actions"> 
+        <a href="/jobs" class="btn btn-lg lbtn mx-2 my-2"> I'm A Job Seeker </a>
+        <button data-bs-toggle="modal" data-bs-target="#recruiterRegister" class="btn btn-lg lbtn mx-2">
+          I'm A Recruiter
+        </button>
+        <div class="modal fade" id="recruiterRegister" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h3 class="modal-title bold" id="staticBackdropLabel">
+                  Experience easily!
+                </h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form action="/register" method="post" class="p-2">
+                  <div class="mb-3">
+                    <div class="input-group">
+                      <span class="input-group-text">Name</span>
+                      <input required="" name="name" type="text" aria-label="name" class="form-control" placeholder="enter your name">
+                    </div>
+                  </div>
+        
+                  <div class="mb-3">
+                    <div class="input-group">
+                      <span class="input-group-text">Email</span>
+                      <input required="" name="email" type="email" aria-label="email" class="form-control" placeholder="enter your email">
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <div class="input-group">
+                      <span class="input-group-text">Password</span>
+                      <input required="" name="password" type="password" aria-label="password" class="form-control" placeholder="enter your password">
+                    </div>
+                  </div>
+        
+                  <button type="submit" class="btn btn-md mt-2 lbtn">Register</button>
+                </form>
+              </div>
+              <div class="modal-footer d-flex align-items-centre justify-content-between">
+                <div class="left d-flex flex-row align-items-centre justify-content-centre">
+                  <!-- Button trigger login modal -->
+                  <span>Already registered?</span>
+                  <a href="/login" class="btn btn-sm px-3 btn-outline-success">
+                    login
+                  </a>
+                </div>
+                <div class="right">
+                  <a href="#"><i class="text-primary bi bi-twitter"></i></a>
+                  <a href="#"><i class="text-danger bi bi-instagram"></i></a>
+                  <a href="#"><i class="text-info bi bi-facebook"></i></a>
+                  <a href="#"><i class="text-success bi bi-whatsapp"></i></a>
+                  <a href="#"><i class="text-primary bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+        </div>
+        </div>
+      </div>
+      <% } %>
+    </div>
+    <div class="right custom-main-right-box">
+      <img src="images/banner.png" alt="banner" class="custom-image-size">
+      <!-- <img src="https://files.codingninjas.in/438375-17407.webp" alt="banner" /> -->
+    </div>
+  </div>
+</div>
+<style>
+  @media (min-width: 350px) {
+    .custom-main-left-box {
+      flex-direction: column;
+    }
+    .custom-main-right-box {
+      width: 100%;
+      overflow: hidden;
+    }
+    .custom-main-box {
+      height: auto;
+    }
+    .custom-image-size{
+      width: inherit;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .custom-main-left-box {
+      flex-direction: row;
+    }
+    .custom-main-box {
+      height: 100vh;
+    }
+    .custom-main-right-box {
+      width: auto;
+      overflow: hidden;
+    }
+  }
+
+</style>
