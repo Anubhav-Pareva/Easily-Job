@@ -1,0 +1,38 @@
+<div class="container">
+<div class="card">
+    <div class="card-body">
+      <h5 class="card-title"><%= job.companyName %></h5>
+      <h6 class="card-subtitle mb-2 text-body-secondary"><%= job.jobCategory %> <%= job.tech %></h6>
+      <p class="card-text"><%= job.jobLocation %></p>
+      <p class="card-text">Salary <%= job.salary %></p>
+      <p class="card-text">Apply By <%= job.applyBy%></p>
+    </div>
+  </div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col" class="text-center">#</th>
+        <th scope="col" class="text-center">Name</th>
+        <th scope="col" class="text-center">Email</th>
+        <th scope="col" class="text-center">Contact</th>
+        <th scope="col" class="text-center">Resume</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% if(job.applicants.length != 0){ %>
+        <% job.applicants.forEach((applicant, index)=>{ %>
+      <tr>
+        <th scope="row" class="text-center"><%= index + 1 %></th>
+        <td class="text-center"><%= applicant.name %></td>
+        <td class="text-center"><%= applicant.email %></td>
+        <td class="text-center"><%= applicant.contact %></td>
+        <td class="text-center"><a href="/<%= applicant.resumeAdd %>" class="btn btn-primary" target="_blank">View Resume</a></td>
+      </tr>    
+      <% }) %>
+      <% }else{ %>
+        <tr><td colspan="5" class="text-center">No Applicant Found</td></tr>
+        <% } %>
+
+    </tbody>
+  </table>
+</div>
