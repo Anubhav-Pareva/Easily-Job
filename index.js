@@ -7,7 +7,7 @@ import session from 'express-session';
 import { loginRecruiter, logoutRecruiter, postNewJob, registerRecruiter } from './src/Controllers/recruiter.controller.js';
 import { loginAuth } from './src/Middlewares/loginAuth.middleware.js';
 
-export const app = express();
+const app = express();
 app.set('view engine', 'ejs');
 app.set('views', path.join(path.resolve(),'src','Views'));
 app.use(expressEjsLayouts);
@@ -34,3 +34,7 @@ app.post('/job/update/:id', loginAuth, updateJobDetail);
 app.post('/job', loginAuth, addNewJob);
 app.get('/job/applicants/:id', getApplicantsView);
 app.post('/search', getSearchView);
+
+app.listen('3000', ()=>{
+    console.log('Server is up on port no 3000');
+});
