@@ -12,7 +12,7 @@ body, html {
     box-shadow: rgba(149, 157, 165, 0.2) 0px 1px 10px;
 }
 .container-lpage{
-    background: var(--primaryColor);
+    background: rgb(24, 22, 66);
     height: 100vh;
 }
 .main{
